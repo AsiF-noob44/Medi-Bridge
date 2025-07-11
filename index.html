@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./images/nav/main-logo.png" rel="icon" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/nav/main-logo.png" type="image/x-icon">
+    <link href="
+        https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Medi Bridge - Your Health Companion</title>
+</head>
+
+<body class="font-sans overflow-x-hidden">
+    <!-- Navbar Start -->
+    <nav class="w-full border-b border-gray-300 bg-white relative">
+        <div class="container mx-auto flex items-center justify-between my-6 px-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="./images/nav/main-logo.png" alt="Medi Bridge Logo" class="h-8 w-8">
+                <span class="text-xl font-bold text-gray-800">Medi Bridge</span>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-gray-700 hover:text-teal-700 transition-colors font-semibold">About Us</a>
+                <!-- Features Dropdown -->
+                <div class="relative group">
+                    <button id="featuresDropdownBtn"
+                        class="flex items-center gap-1 font-semibold text-gray-700 hover:text-teal-700 transition-colors cursor-pointer focus:outline-none"
+                        type="button">
+                        Features
+                        <svg id="dropdownIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="featuresDropdown"
+                        class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-200 z-10">
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer font-semibold">Feature
+                            1</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer font-semibold">Feature
+                            2</a>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-700 hover:text-teal-700 transition-colors font-semibold">Find Doctor</a>
+                <a href="#" class="text-gray-700 hover:text-teal-700 transition-colors font-semibold">Blog</a>
+            </div>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <button
+                    class="px-5 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-100 transition-colors cursor-pointer font-semibold">Log
+                    In</button>
+                <button
+                    class="px-5 py-2 rounded-lg text-white bg-teal-700 hover:bg-teal-800 transition-colors cursor-pointer font-semibold">Register</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn"
+                class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-700 focus:ring-opacity-50 cursor-pointer">
+                <svg id="menuIcon" class="w-6 h-6 text-gray-700 transition-all duration-700" viewBox="0 0 24 24">
+                    <rect class="line top" x="3" y="6" width="18" height="2" rx="1" fill="currentColor" />
+                    <rect class="line middle" x="3" y="11" width="18" height="2" rx="1" fill="currentColor" />
+                    <rect class="line bottom" x="3" y="16" width="18" height="2" rx="1" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="lg:hidden bg-white border-t border-gray-200 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <!-- Mobile Nav Links -->
+                <div class="space-y-3">
+                    <a href="#"
+                        class="block text-gray-700 hover:text-teal-700 transition-colors font-semibold py-2 border-b border-gray-100">About
+                        Us</a>
+
+                    <!-- Mobile Features Dropdown -->
+                    <div class="border-b border-gray-100">
+                        <button id="mobileFeaturesBtn"
+                            class="flex items-center justify-between w-full text-left text-gray-700 hover:text-teal-700 transition-colors font-semibold py-2 focus:outline-none cursor-pointer"
+                            type="button">
+                            Features
+                            <svg id="mobileFeaturesIcon" class="w-4 h-4 transition-transform cursor-pointer" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobileFeaturesDropdown"
+                            class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pl-4 py-2 space-y-2">
+                                <a href="#"
+                                    class="block text-gray-600 hover:text-teal-700 transition-colors font-medium py-1">Feature
+                                    1</a>
+                                <a href="#"
+                                    class="block text-gray-600 hover:text-teal-700 transition-colors font-medium py-1">Feature
+                                    2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="block text-gray-700 hover:text-teal-700 transition-colors font-semibold py-2 border-b border-gray-100">Find
+                        Doctor</a>
+                    <a href="#"
+                        class="block text-gray-700 hover:text-teal-700 transition-colors font-semibold py-2 border-b border-gray-100">Blog</a>
+                </div>
+
+                <!-- Mobile Action Buttons -->
+                <div class="pt-4 space-y-3">
+                    <button
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-100 transition-colors font-semibold cursor-pointer">Log
+                        In</button>
+                    <button
+                        class="w-full px-5 py-3 rounded-lg text-white bg-teal-700 hover:bg-teal-800 transition-colors font-semibold cursor-pointer">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="w-full bg-white py-8 sm:py-16 md:py-20 lg:py-24 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex justify-center items-center md:order-2 order-1 mb-6 md:mb-0">
+                <img src="./images/hero/right-content.png" alt="Hero Content"
+                    class="w-full max-w-md md:max-w-none h-auto object-contain md:object-cover">
+            </div>
+            <!-- Left Texts & Button -->
+            <div
+                class="w-full md:w-1/2 max-w-xl flex flex-col justify-center md:order-1 order-2 text-center md:text-left space-y-4 md:space-y-6">
+
+                <!-- Hero Badge -->
+                <div class="flex items-center mb-3 md:mb-4 justify-center md:justify-start">
+                    <div class="flex items-center bg-[#E6F4F1] rounded-full ps-2 pe-4 py-1 gap-2 w-fit">
+                        <!-- Icon aligned to the far left inside the badge -->
+                        <div class="h-7 w-7 rounded-full bg-[#159C8A] flex items-center justify-center">
+                            <img src="./images/hero/awards.png" alt="Award Icon" class="h-4 w-4">
+                        </div>
+                        <!-- Text next to the icon -->
+                        <span class="text-[#01594E] font-semibold text-base">Top-rated healthcare service</span>
+                    </div>
+                </div>
+
+                <h1
+                    class="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[59.56px] leading-tight sm:leading-[120%] text-gray-900 mb-3 sm:mb-4 md:mb-6 tracking-normal">
+                    Transforming Healthcare for a Better Tomorrow
+                </h1>
+                <p class="text-gray-600 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8">
+                    With a focus on innovation, compassion, and personalized care, we are committed to guiding you
+                    towards a healthier and more vibrant tomorrow.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start w-full">
+                    <a href="#"
+                        class="px-4 py-2 sm:px-6 sm:py-3 rounded-lg bg-teal-700 text-white font-semibold hover:bg-teal-800 transition-colors text-center w-full sm:w-auto">
+                        Get Started
+                    </a>
+                    <a href="#"
+                        class="px-4 py-2 sm:px-6 sm:py-3 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+
+
+
+
+    <!-- Social Proof Section Start -->
+    <section class="w-full py-8 md:py-12 bg-[#F9FAFA]">
+        <div class="container mx-auto flex flex-col items-center">
+            <h2 class="text-center text-gray-500 text-base md:text-lg font-semibold mb-6 md:mb-8">Trusted by</h2>
+            <div class="w-full flex flex-wrap justify-center items-center gap-8 md:gap-12 px-4 md:px-0">
+                <img src="./images/social-proof/Logo.png" alt="Logo 1"
+                    class="h-10 md:h-12 object-contain cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_24px_0_rgba(21,156,138,0.10)] rounded" />
+                <img src="./images/social-proof/Logo (1).png" alt="Logo 2"
+                    class="h-10 md:h-12 object-contain cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_24px_0_rgba(21,156,138,0.10)] rounded" />
+                <img src="./images/social-proof/Logo (2).png" alt="Logo 3"
+                    class="h-10 md:h-12 object-contain cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_24px_0_rgba(21,156,138,0.10)] rounded" />
+                <img src="./images/social-proof/Logo (3).png" alt="Logo 4"
+                    class="h-10 md:h-12 object-contain cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_24px_0_rgba(21,156,138,0.10)] rounded" />
+                <img src="./images/social-proof/Logo (4).png" alt="Logo 5"
+                    class="h-10 md:h-12 object-contain cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_24px_0_rgba(21,156,138,0.10)] rounded" />
+            </div>
+        </div>
+    </section>
+    <!-- Social Proof Section End -->
+
+    <!-- Why Choose Us Section Start -->
+    <section class="w-full py-12 md:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <h2
+                class="custom-heading text-center text-gray-900 font-medium mb-4 md:mb-6 leading-[140%] tracking-normal">
+                Experience the Difference<br>in Our Healthcare Approach
+            </h2>
+            <p class="text-center text-gray-500 text-base md:text-lg mb-8 md:mb-12 max-w-3xl">Transform your healthcare
+                journey with our
+                innovative and personalized approach</p>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center p-8 transition-all duration-300 hover:shadow-lg cursor-pointer">
+                    <div class="h-16 w-16 flex items-center justify-center rounded-full bg-[#159C8A] mb-6">
+                        <img src="./images/why-choose-us/expert-care.png" alt="Expert Care"
+                            class="h-16 w-16 object-contain" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Expert Care</h3>
+                    <p class="text-gray-500 text-center text-base">Our team of experienced healthcare professionals is
+                        dedicated to providing the highest quality.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center p-8 transition-all duration-300 hover:shadow-lg cursor-pointer">
+                    <div class="h-16 w-16 flex items-center justify-center rounded-full bg-[#159C8A] mb-6">
+                        <img src="./images/why-choose-us/personalized.png" alt="Personalized Approach"
+                            class="h-16 w-16 object-contain" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Personalized Approach</h3>
+                    <p class="text-gray-500 text-center text-base">We understand that every patient is unique, which is
+                        why we tailor our services to meet your needs.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center p-8 transition-all duration-300 hover:shadow-lg cursor-pointer">
+                    <div class="h-16 w-16 flex items-center justify-center rounded-full bg-[#159C8A] mb-6">
+                        <img src="./images/why-choose-us/focus-on-welness.png" alt="Focus on Wellness"
+                            class="h-16 w-16 object-contain" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Focus on Wellness</h3>
+                    <p class="text-gray-500 text-center text-base">Beyond treating illness, we emphasize preventive care
+                        and wellness promotion.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center p-8 transition-all duration-300 hover:shadow-lg cursor-pointer">
+                    <div class="h-16 w-16 flex items-center justify-center rounded-full bg-[#159C8A] mb-6">
+                        <img src="./images/why-choose-us/community-connection.png" alt="Community Connection"
+                            class="h-16 w-16 object-contain" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Community Connection</h3>
+                    <p class="text-gray-500 text-center text-base">We are deeply rooted in the local community and are
+                        committed to serving and giving back.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section End -->
+
+
+    <!-- Our Services -->
+    <section class="w-full py-8 md:py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
+                <!-- Left Content - Image -->
+                <div class="w-full lg:w-1/2 order-1 lg:order-1">
+                    <img src="./images/unveil/main.png" alt="Medical professionals"
+                        class="w-full h-auto object-contain rounded-xl shadow-lg lg:h-full lg:object-cover lg:max-h-[600px]">
+                </div>
+
+                <!-- Right Content - Text and Buttons -->
+                <div class="w-full lg:w-1/2 order-2 lg:order-2 text-center lg:text-left">
+                    <h2
+                        class="custom-heading text-gray-900 font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 md:mb-4 leading-tight">
+                        Unveiling a Spectrum<br class="hidden sm:block"> of Specialized Offerings
+                    </h2>
+
+                    <p
+                        class="text-gray-600 text-sm sm:text-base md:text-lg mb-6 md:mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0">
+                        Discover a tailored approach to your health with our versatile range of specialized services,
+                        ensuring every aspect of your healthcare journey is seamlessly addressed.
+                    </p>
+
+                    <!-- Services Grid -->
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-4 lg:gap-x-8 lg:gap-y-4 xl:gap-6 max-w-2xl mx-auto lg:mx-0">
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Diagnostic Imaging
+                            </span>
+                        </button>
+
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Mental Health Services
+                            </span>
+                        </button>
+
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Laboratory Services
+                            </span>
+                        </button>
+
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Rehabilitation Services
+                            </span>
+                        </button>
+
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Home Healthcare
+                            </span>
+                        </button>
+
+                        <button
+                            class="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 bg-white border border-gray-200 hover:border-[#159C8A] hover:bg-[#F0FAF8] rounded-xl sm:rounded-[14.89px] px-4 sm:px-5 lg:px-[18.61px] py-3 sm:py-4 lg:py-[18.61px] transition-all duration-300 ease-in-out group cursor-pointer outline-none focus:ring-2 focus:ring-[#159C8A] focus:ring-opacity-50 shadow-sm hover:shadow-md w-full min-h-[56px] lg:w-fit lg:h-auto">
+                            <div class="flex items-center justify-center w-6 sm:w-7 lg:w-8 flex-shrink-0">
+                                <img src="./images/unveil/green-tick.png" alt="Tick"
+                                    class="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
+                            </div>
+                            <span
+                                class="text-gray-800 group-hover:text-[#159C8A] font-medium transition-colors duration-300 text-sm sm:text-base lg:text-base whitespace-nowrap text-center sm:flex-1 sm:text-left lg:text-center lg:flex-none">
+                                Geriatric Care
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

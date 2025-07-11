@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Custom heading style */
+.custom-heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.25rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+@media (min-width: 640px) {
+  .custom-heading {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .custom-heading {
+    font-size: 2.79rem;
+  }
+}
+
+/* Hamburger menu animation styles */
+#menuIcon .line {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+#menuIcon.x .top {
+  transform: translateY(5px) rotate(45deg);
+}
+
+#menuIcon.x .middle {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#menuIcon.x .bottom {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+#menuIcon:not(.x) .top,
+#menuIcon:not(.x) .bottom {
+  transform: translateY(0) rotate(0deg);
+}
+
+#menuIcon:not(.x) .middle {
+  opacity: 1;
+  transform: scale(1);
+}
