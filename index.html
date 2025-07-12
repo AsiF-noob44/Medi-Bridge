@@ -461,6 +461,365 @@
             </button>
         </div>
     </section>
+    <!-- Our Doctors Section End -->
+
+    <!-- Testimonials Section Start -->
+    <section class="w-full py-12 md:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <h2
+                class="text-center text-gray-900 font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4 leading-[1.4] tracking-normal">
+                See What Our <br> Patients Have to Say
+            </h2>
+            <p class="text-center text-gray-500 text-base md:text-lg mb-10 md:mb-12 md:mt-4 max-w-2xl">
+                Discover firsthand accounts of our patients' experiences
+            </p>
+
+            <div class="w-full flex flex-col lg:grid lg:grid-cols-3 gap-6">
+                <!-- Left Testimonial Card -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between p-6 sm:p-8 h-[340px] md:h-[450px] transition-all duration-300 hover:shadow-lg">
+                    <p class="text-gray-900 text-base md:text-lg mb-6">"Medi Bridge has been a true lifesaver for me and
+                        my family. When my father fell ill, we turned to them for help, and they exceeded our
+                        expectations
+                        in every way."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <img src="./images/patients/woman.png" alt="Mecca Rachel"
+                            class="h-12 w-12 rounded-full object-cover border border-gray-200" />
+                        <div>
+                            <span class="block font-semibold text-gray-900">Mecca Rachel</span>
+                            <span class="block text-gray-500 text-sm">24 years old</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Testimonial Card -->
+                <div
+                    class="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between p-6 sm:p-8 h-[340px] md:h-[450px] transition-all duration-300 hover:shadow-lg lg:order-3">
+                    <p class="text-gray-900 text-base md:text-lg mb-6">"I've been a patient at Medi Bridge for years,
+                        and they consistently deliver outstanding care. Their dedication to patient well-being is
+                        evident in
+                        every interaction."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <img src="./images/patients/man.png" alt="Adam Jackson"
+                            class="h-12 w-12 rounded-full object-cover border border-gray-200" />
+                        <div>
+                            <span class="block font-semibold text-gray-900">Adam Jackson</span>
+                            <span class="block text-gray-500 text-sm">27 years old</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Image Card -->
+                <div class="w-full mx-auto lg:mx-0 lg:h-[450px] rounded-xl overflow-hidden 
+                        order-first md:order-none 
+                        md:col-span-2 lg:col-span-1 
+                        md:max-w-2xl lg:max-w-none
+                        aspect-[4/3] sm:aspect-[5/3] md:aspect-[16/9] lg:aspect-auto">
+                    <img src="./images/patients/patient-video.png" alt="Patient"
+                        class="w-full h-full object-contain md:object-cover" />
+                </div>
+            </div>
+
+            <button
+                class="mt-10 px-6 py-3 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-colors shadow-sm cursor-pointer">
+                See All Testimonials
+            </button>
+        </div>
+    </section>
+    <!-- Testimonials Section End -->
+
+    <!-- FAQ Section Start -->
+    <section class="w-full py-16 md:py-24 bg-white">
+        <div class="container mx-auto flex flex-col lg:flex-row gap-12 items-start px-4">
+            <!-- Left Side: Text and Button -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start justify-center mb-10 lg:mb-0">
+                <h2 class="text-gray-900 font-medium text-3xl md:text-5xl leading-tight mb-6">Frequently<br>Asked
+                    Questions</h2>
+                <p class="text-gray-500 text-base md:text-lg mb-8">Still have something to ask? Contact our sales team
+                </p>
+                <button
+                    class="px-6 py-3 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-colors shadow-sm cursor-pointer">Contact
+                    Us</button>
+            </div>
+
+            <!-- Right Side: Accordion -->
+            <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                <div id="faqAccordion" class="space-y-4">
+                    <!-- FAQ Item 1 (Open by default) -->
+                    <div class="faq-item rounded-xl overflow-hidden border border-gray-200">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between px-6 py-6 bg-[#017D6E] transition-colors duration-300 focus:outline-none cursor-pointer"
+                            aria-expanded="true">
+                            <span class="text-white font-semibold text-lg md:text-xl">How do I schedule an
+                                appointment?</span>
+                            <svg class="faq-icon transition-transform duration-300 rotate-180 faq-icon-white" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-5 bg-white text-gray-700 text-base md:text-lg block">
+                            Scheduling an appointment at Medi Bridge is easy. You can call our office directly or use
+                            our online appointment booking system on our website. Simply select your preferred date and
+                            time, and our staff will confirm your appointment promptly.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item rounded-xl overflow-hidden border border-gray-200">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between px-6 py-6 bg-white transition-colors duration-300 focus:outline-none cursor-pointer"
+                            aria-expanded="false">
+                            <span class="text-gray-900 font-semibold text-lg md:text-xl">What types of healthcare
+                                services does we offer?</span>
+                            <svg class="faq-icon transition-transform duration-300 faq-icon-default" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-5 bg-white text-gray-700 text-base md:text-lg hidden">
+                            Medi Bridge offers a wide range of healthcare services including primary care, specialist
+                            consultations, diagnostic imaging, laboratory services, and more to meet your health needs.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item rounded-xl overflow-hidden border border-gray-200">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between px-6 py-6 bg-white transition-colors duration-300 focus:outline-none cursor-pointer"
+                            aria-expanded="false">
+                            <span class="text-gray-900 font-semibold text-lg md:text-xl">Are walk–in appointments
+                                available?</span>
+                            <svg class="faq-icon transition-transform duration-300 faq-icon-default" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-5 bg-white text-gray-700 text-base md:text-lg hidden">
+                            Yes, walk-in appointments are available for urgent care and select services. Please check
+                            our website or call ahead for availability.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item rounded-xl overflow-hidden border border-gray-200">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between px-6 py-6 bg-white transition-colors duration-300 focus:outline-none cursor-pointer"
+                            aria-expanded="false">
+                            <span class="text-gray-900 font-semibold text-lg md:text-xl">Does Medi Bridge accept
+                                insurance plans?</span>
+                            <svg class="faq-icon transition-transform duration-300 faq-icon-default" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-5 bg-white text-gray-700 text-base md:text-lg hidden">
+                            Yes, Medi Bridge accepts most major insurance plans. Please contact our office for specific
+                            details regarding your coverage.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item rounded-xl overflow-hidden border border-gray-200">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between px-6 py-6 bg-white transition-colors duration-300 focus:outline-none cursor-pointer"
+                            aria-expanded="false">
+                            <span class="text-gray-900 font-semibold text-lg md:text-xl">What safety measures does Medi
+                                Bridge have?</span>
+                            <svg class="faq-icon transition-transform duration-300 faq-icon-default" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-5 bg-white text-gray-700 text-base md:text-lg hidden">
+                            Medi Bridge follows strict safety protocols including regular sanitization, health
+                            screenings, and social distancing to ensure the well-being of our patients and staff.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Banner Section Start -->
+    <section class="w-full py-12 md:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div
+                class="relative bg-[#017D6E] rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-[32px] overflow-hidden py-8 sm:py-12 md:py-16 lg:py-20">
+                <!-- Top Left -->
+                <div
+                    class="absolute -top-16 -left-16 w-32 h-32 sm:-top-20 sm:-left-20 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 bg-[#D9D9D9] opacity-30 rounded-full">
+                </div>
+
+                <!-- Bottom Right -->
+                <div
+                    class="absolute -bottom-16 -right-16 w-36 h-36 sm:-bottom-24 sm:-right-24 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-[#D9D9D9] opacity-30 rounded-full">
+                </div>
+
+                <div class="relative z-10 px-2 sm:px-4 md:px-6 lg:px-8">
+                    <div class="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto text-center">
+                        <h2
+                            class="text-white font-semibold text-[2rem] sm:text-[2.5rem] md:text-[2.8rem] lg:text-[44.67px] leading-[140%] tracking-[0%] text-center mb-4 md:mb-6">
+                            Discover Comprehensive<br>
+                            Care Tailored to Your Needs
+                        </h2>
+                        <p
+                            class="text-white text-opacity-90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto">
+                            Experience personalized healthcare solutions designed to prioritize your well-being
+                        </p>
+                        <button
+                            class="inline-block px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-white text-[#017D6E] font-medium text-base sm:text-lg rounded-lg transition-all duration-300 shadow-md cursor-pointer
+                            hover:bg-[#159C8A] hover:text-white hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                            Make an Appointment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+
+    <!-- Footer Section Start -->
+    <footer class="w-full bg-white border-t border-gray-100 mt-12">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-0">
+                <!-- Brand and Tagline -->
+                <div
+                    class="flex flex-col items-center md:items-start text-center md:text-left md:w-[340px] lg:w-[400px] mb-8 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
+                        <img src="./images/nav/main-logo.png" alt="Medi Bridge Logo" class="h-8 w-8">
+                        <span class="font-semibold text-2xl text-gray-900">Medi Bridge</span>
+                    </div>
+                    <span class="text-gray-600 text-medium font-semibold">Empowering Health, Inspiring Lives.</span>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="flex-1 flex flex-col items-center md:items-start md:flex-row md:justify-end">
+                    <div class="w-full max-w-xl flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-8 md:w-auto">
+                        <div class="flex w-full justify-between md:block md:col-span-1 md:row-span-1 md:p-0 gap-y-6">
+                            <div class="text-left w-1/2 pr-4 md:w-full md:pr-0">
+                                <span class="font-semibold text-gray-900 mb-3 block">Company</span>
+                                <ul class="space-y-3">
+                                    <li><a href="#" class="text-gray-700 hover:text-[#017D6E] transition-colors">About
+                                            Us</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Careers</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Doctors</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-right w-1/2 pl-4 md:hidden">
+                                <span class="font-semibold text-gray-900 mb-3 block">Services</span>
+                                <ul class="space-y-3">
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Clinics</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Healthcare</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-gray-700 hover:text-[#017D6E] transition-colors">Training
+                                            Center</a>
+                                    </li>
+                                    <li><a href="#" class="text-gray-700 hover:text-[#017D6E] transition-colors">Online
+                                            Consultation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:col-span-1 md:row-span-1 md:text-left">
+                            <span class="font-semibold text-gray-900 mb-3 block">Services</span>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-700 hover:text-[#017D6E] transition-colors">Clinics</a>
+                                </li>
+                                <li><a href="#"
+                                        class="text-gray-700 hover:text-[#017D6E] transition-colors">Healthcare</a>
+                                </li>
+                                <li><a href="#" class="text-gray-700 hover:text-[#017D6E] transition-colors">Training
+                                        Center</a>
+                                </li>
+                                <li><a href="#" class="text-gray-700 hover:text-[#017D6E] transition-colors">Online
+                                        Consultation</a></li>
+                            </ul>
+                        </div>
+                        <!-- Social Media -->
+                        <div class="text-center lg:ps-3 md:text-left md:col-span-1 md:col-start-3">
+                            <span class="font-semibold text-gray-900 mb-3 block">Social Media</span>
+                            <ul class="space-y-3">
+                                <li><a href="https://www.instagram.com/asif_saeed.96/"
+                                        class="text-gray-700 hover:text-[#017D6E] transition-colors"
+                                        target="_blank">Instagram</a>
+                                </li>
+                                <li><a href="https://www.facebook.com/asif.saeed.rifat/"
+                                        class="text-gray-700 hover:text-[#017D6E] transition-colors"
+                                        target="_blank">Facebook</a>
+                                </li>
+                                <li><a href="https://github.com/AsiF-noob44"
+                                        class="text-gray-700 hover:text-[#017D6E] transition-colors"
+                                        target="_blank">Github</a>
+                                </li>
+                                <li><a href="www.linkedin.com/in/abu-sayeed-rifat-260535336"
+                                        class="text-gray-700 hover:text-[#017D6E] transition-colors"
+                                        target="_blank">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="border-t-2 border-gray-300 mt-10 pt-6 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between text-gray-400">
+                <div class="flex flex-col items-center w-full lg:hidden">
+                    <span class="text-sm md:text-base mb-1">© Copyright Medi Bridge 2025 |</span>
+                    <span
+                        class="font-semibold text-[#017D6E] hover:underline transition-colors cursor-pointer text-sm md:text-base">By
+                        Abu Sayeed Rifat</span>
+                    <div
+                        class="flex flex-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 justify-center gap-3 sm:gap-4 md:gap-5 mt-2 w-full px-1">
+                        <a href="#"
+                            class="hover:text-[#017D6E] transition-colors text-xs sm:text-xs md:text-sm whitespace-nowrap">FAQ</a>
+                        <a href="#"
+                            class="hover:text-[#017D6E] transition-colors text-xs sm:text-xs md:text-sm whitespace-nowrap">Terms
+                            of Condition</a>
+                        <a href="#"
+                            class="hover:text-[#017D6E] transition-colors text-xs sm:text-xs md:text-sm whitespace-nowrap">Privacy
+                            Policy</a>
+                        <a href="#"
+                            class="hover:text-[#017D6E] transition-colors text-xs sm:text-xs md:text-sm whitespace-nowrap">Changelog</a>
+                    </div>
+                </div>
+                <!-- Desktop Footer -->
+
+                <div class="hidden lg:flex flex-row items-center justify-between w-full">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-center sm:text-left">
+                        <span class="text-base mb-0">© Copyright Medi Bridge 2025 |</span>
+                        <span
+                            class="font-semibold text-[#017D6E] hover:underline transition-colors cursor-pointer text-base">By
+                            Abu Sayeed Rifat</span>
+                    </div>
+                    <div class="flex flex-nowrap justify-end gap-6 w-auto">
+                        <a href="#" class="hover:text-[#017D6E] transition-colors text-base whitespace-nowrap">FAQ</a>
+                        <a href="#" class="hover:text-[#017D6E] transition-colors text-base whitespace-nowrap">Terms of
+                            Condition</a>
+                        <a href="#" class="hover:text-[#017D6E] transition-colors text-base whitespace-nowrap">Privacy
+                            Policy</a>
+                        <a href="#"
+                            class="hover:text-[#017D6E] transition-colors text-base whitespace-nowrap">Changelog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
 
     <script src="./js/script.js"></script>
 

@@ -163,4 +163,87 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // FAQ Accordion Interactivity
+  const faqToggles = document.querySelectorAll(".faq-toggle");
+  const faqAccordion = document.getElementById("faqAccordion");
+
+  faqToggles.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const parent = btn.closest(".faq-item");
+      const content = parent.querySelector(".faq-content");
+      const icon = btn.querySelector(".faq-icon");
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      const span = btn.querySelector("span");
+
+      if (!expanded) {
+        btn.setAttribute("aria-expanded", "true");
+        btn.classList.remove("bg-white");
+        btn.classList.add("bg-[#017D6E]");
+        icon.classList.add("rotate-180");
+        icon.classList.remove("faq-icon-default");
+        icon.classList.add("faq-icon-white");
+        span.classList.remove("text-gray-900");
+        span.classList.add("text-white");
+        content.classList.remove("hidden");
+        content.classList.add("block");
+      } else {
+        btn.setAttribute("aria-expanded", "false");
+        btn.classList.remove("bg-[#017D6E]");
+        btn.classList.add("bg-white");
+        icon.classList.remove("rotate-180");
+        icon.classList.remove("faq-icon-white");
+        icon.classList.add("faq-icon-default");
+        span.classList.remove("text-white");
+        span.classList.add("text-gray-900");
+        content.classList.add("hidden");
+        content.classList.remove("block");
+      }
+    });
+  });
+
+  // Closing all accordions when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!faqAccordion.contains(e.target)) {
+      faqToggles.forEach(function (btn) {
+        const parent = btn.closest(".faq-item");
+        const content = parent.querySelector(".faq-content");
+        const icon = btn.querySelector(".faq-icon");
+        const span = btn.querySelector("span");
+        btn.setAttribute("aria-expanded", "false");
+        btn.classList.remove("bg-[#017D6E]");
+        btn.classList.add("bg-white");
+        icon.classList.remove("rotate-180");
+        icon.classList.remove("faq-icon-white");
+        icon.classList.add("faq-icon-default");
+        span.classList.remove("text-white");
+        span.classList.add("text-gray-900");
+        content.classList.add("hidden");
+        content.classList.remove("block");
+      });
+    }
+  });
+
+  // cursor-pointer to span and icon in FAQ accordion
+  function addFaqCursorPointer() {
+    document.querySelectorAll(".faq-toggle").forEach(function (btn) {
+      var span = btn.querySelector("span");
+      var icon = btn.querySelector(".faq-icon");
+      if (span) span.classList.add("cursor-pointer");
+      if (icon) icon.classList.add("cursor-pointer");
+      [span, icon].forEach(function (el) {
+        if (el) {
+          el.addEventListener("click", function (e) {
+            e.stopPropagation();
+            btn.click();
+          });
+        }
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    addFaqCursorPointer();
+  });
 });
